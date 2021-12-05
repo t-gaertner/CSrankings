@@ -19,3 +19,7 @@ make (conda deactivated)
 
 adapt index.html <tr> ... </tr>
 python3 -m http.server
+
+
+in the current version, generated files have been removed form the repository---> this won't work online 
+to reactivate generate and add  sth like  generated-author-info.csv csrankings.js csrankings.min.js csrankings.csv

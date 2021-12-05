@@ -49,7 +49,7 @@ shrink-dblp:
 	@echo "Shrinking the DBLP file."
 	basex -c filter.xq > dblp2.xml
 	gzip dblp2.xml
-	mv dblp.xml.gz dblp-original.xml.gz
+	#mv dblp.xml.gz dblp-original.xml.gz
 	mv dblp2.xml.gz dblp.xml.gz	
 
 tg-shrink-dblp:
