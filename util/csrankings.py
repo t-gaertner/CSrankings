@@ -201,10 +201,23 @@ areadict: Dict[Area, List[Conference]] = {
         Conference("ICML (2)"),
         Conference("ICML (3)"),
     ],
+    Area("ecml"): [
+        Conference("ECML"),
+        Conference("ECML/PKDD"),
+        Conference("ECML/PKDD (1)"),
+        Conference("ECML/PKDD (2)"),
+        Conference("ECML/PKDD (3)"),
+        Conference("ECML/PKDD (4)"),
+        Conference("ECML/PKDD (5)"),
+    ],
     Area("kdd"): [Conference("KDD")],
+    Area("icdm"): [Conference("ICDM")],
+    Area("colt"): [Conference("COLT")],
     # 'ai': ['AAAI', 'AAAI/IAAI', 'IJCAI'],
     Area("aaai"): [Conference("AAAI"), Conference("AAAI/IAAI")],
     Area("ijcai"): [Conference("IJCAI")],
+    Area("aistats"): [Conference("AISTATS")],
+    Area("uai"): [Conference("UAI")],
     # AAAI listed to account for AAAI/IAAI joint conference
     # SIGGRAPH
     # - special handling of TOG to select SIGGRAPH and SIGGRAPH Asia

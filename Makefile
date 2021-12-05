@@ -35,6 +35,11 @@ clean-dblp:
 	mv dblp-fixed.xml dblp.xml
 	$(MAKE) shrink-dblp
 
+only-clean-dblp:
+	@echo "Fixing character encodings."
+	sh ./util/fix-dblp.sh
+	mv dblp-fixed.xml dblp.xml
+
 download-dblp:
 	@echo "Downloading from DBLP."
 	rm -f dblp.xml.gz
@@ -45,7 +50,14 @@ shrink-dblp:
 	basex -c filter.xq > dblp2.xml
 	gzip dblp2.xml
 	mv dblp.xml.gz dblp-original.xml.gz
-	mv dblp2.xml.gz dblp.xml.gz
+	mv dblp2.xml.gz dblp.xml.gz	
+
+tg-shrink-dblp:
+	@echo "Shrinking the DBLP file."
+	basex -c playfilter.xq > dblp2.xml
+	gzip dblp2.xml
+	mv dblp.xml.gz dblp-original.xml.gz
+	mv dblp2.xml.gz dblp.xml.gz	
 
 faculty-affiliations.csv homepages.csv scholar.csv csrankings.csv: csrankings-*.csv
 	@echo "Splitting main datafile."
